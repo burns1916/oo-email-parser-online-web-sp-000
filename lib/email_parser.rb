@@ -7,14 +7,13 @@ class EmailAddressParser
   attr_accessor :emails
 
   def initialize(email_addresses)
-    @emails = email_addresses.split(/\,*\s/)
-    @emails.uniq!
+    @emails = email_addresses
   end
 
-  def parse
-    @emails.each do |email_addresses|
-      email_addresses.split(/\,*\s*/)
+    def parse
+      @emails.each do |email_addresses|
+        email_addresses.split(/\,*\s*/)
+      end
     end
-  end
 
 end
